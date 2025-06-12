@@ -26,7 +26,7 @@ pipeline {
                         elif [ -f "sql/init.sql" ]; then
                           echo "OK: sql/init.sql ES UN ARCHIVO en el workspace de Jenkins."
                           echo "Primeras líneas de sql/init.sql en el workspace:"
-                          head -n 5 sql/init.s
+                          head -n 5 sql/init.sql
                         else
                           echo "ADVERTENCIA: sql/init.sql no es ni un archivo ni un directorio, o no existe."
                         fi
