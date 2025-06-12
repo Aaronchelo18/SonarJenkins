@@ -14,7 +14,7 @@ pipeline {
                     echo "Limpiando workspace..."
                     cleanWs()
                     echo "Clonando repositorio..."
-                    git branch: 'master', url: 'https://github.com/Aaronchelo18/ecommerce_Dockerizado.git'
+                    git branch: 'main', url: 'https://github.com/aaronchelo18/ecommerce_Dockerizado.git'
 
                     echo "Verificando estructura de 'sql/' DESPUÉS del clone en el workspace de Jenkins:"
                     sh 'ls -la sql/' // Muestra el contenido detallado de la carpeta sql
