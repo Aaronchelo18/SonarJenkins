@@ -14,7 +14,7 @@ pipeline {
                     echo "Limpiando workspace..."
                     cleanWs()
                     echo "Clonando repositorio..."
-                    git branch: 'master', url: 'https://github.com/arlysanchez/ecommerce_Dockerizado.git'
+                    git branch: 'master', url: 'https://github.com/Aaronchelo18/ecommerce_Dockerizado.git'
 
                     echo "Verificando estructura de 'sql/' DESPUÉS del clone en el workspace de Jenkins:"
                     sh 'ls -la sql/' // Muestra el contenido detallado de la carpeta sql
@@ -26,7 +26,7 @@ pipeline {
                         elif [ -f "sql/init.sql" ]; then
                           echo "OK: sql/init.sql ES UN ARCHIVO en el workspace de Jenkins."
                           echo "Primeras líneas de sql/init.sql en el workspace:"
-                          head -n 5 sql/init.sql
+                          head -n 5 sql/init.s
                         else
                           echo "ADVERTENCIA: sql/init.sql no es ni un archivo ni un directorio, o no existe."
                         fi
