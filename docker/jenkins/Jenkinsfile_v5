@@ -139,7 +139,6 @@ pipeline {
                         echo "Verificando salud de la aplicación..."
                         sh "curl -v -f --connect-timeout 10 --max-time 20 http://localhost:8085/actuator/health || exit 1"
                         // -v para verbose output de curl, --connect-timeout y --max-time para controlar tiempos de curl
-                        // -v para verbose output de curl, --connect-timeout y --max-time para controlar tiempos de curl
                         echo "Aplicación saludable."
                     }
                 }
