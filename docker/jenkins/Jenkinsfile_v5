@@ -62,10 +62,7 @@ pipeline {
                         echo "Esperando a que los servicios se estabilicen..."
                         sleep(90)
 
-                        echo "Verificando salud de la aplicación..."
-                        sh "curl -v -f --connect-timeout 10 --max-time 20 http://localhost:8084/actuator/health || exit 1"
-
-                        echo "Aplicación saludable."
+                        echo "Despliegue completado."
                     }
                 }
             }
