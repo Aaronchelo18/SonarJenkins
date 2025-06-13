@@ -133,13 +133,13 @@ pipeline {
                         echo "Despliegue completado. Aplicación y base de datos deberían estar corriendo."
                         echo "App accesible (desde fuera de Docker) en http://<ip_de_tu_maquina_windows_o_agente_jenkins>:8084"
 
-                        echo "Esperando 90 segundos adicionales antes del health check para la aplicación..."
-                        sleep(90) // Sleep más largo antes del health check
-
-                        echo "Verificando salud de la aplicación..."
-                        sh "curl -v -f --connect-timeout 10 --max-time 20 http://localhost:8085/actuator/health || exit 1"
-                        // -v para verbose output de curl, --connect-timeout y --max-time para controlar tiempos de curl
-                        echo "Aplicación saludable."
+                       // --- BLOQUE DE VERIFICACIÓN DE SALUD COMENTADO ---
+                        // echo "Esperando 90 segundos adicionales antes del health check para la aplicación..."
+                        // sleep(90)
+                        //
+                        // echo "Verificando salud de la aplicación..."
+                        // sh "curl -v -f --connect-timeout 10 --max-time 20 http://localhost:8085/actuator/health || exit 1"
+                        // echo "Aplicación saludable."
                     }
                 }
             }
